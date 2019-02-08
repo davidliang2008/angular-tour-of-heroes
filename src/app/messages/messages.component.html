@@ -1,0 +1,9 @@
+<div *ngIf="messageService.messages.length">
+  <h5>Messages <span class="badge badge-secondary">{{ messageService.messages.length }}</span></h5>
+  <button class="btn btn-danger btn-sm" (click)="messageService.clear()">
+    clear all
+  </button>
+  <div *ngFor="let message of messageService.messages">
+    {{ message }}
+  </div>
+</div>
