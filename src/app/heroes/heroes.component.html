@@ -14,11 +14,6 @@
     </div>
   </div>
   <div class="col-lg-9">
-    <div class="card" *ngIf="selectedHero">
-      <div class="card-header">
-        <small>#{{ selectedHero.id }}</small>
-        {{ selectedHero.name }}
-      </div>
-    </div>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   </div>
 </div>
