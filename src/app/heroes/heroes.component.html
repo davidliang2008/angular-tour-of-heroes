@@ -1,9 +1,24 @@
 <h4>
   My Heroes <span class="badge badge-secondary">{{ heroes.length }}</span>
 </h4>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action" *ngFor="let hero of heroes">
-    <small>#{{ hero.id }}</small>
-    {{ hero.name }}
-  </a>
+<div class="row">
+  <div class="col-lg-3">
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action"
+         [class.active]="hero === selectedHero"
+         *ngFor="let hero of heroes"
+         (click)="onSelect(hero, $event)">
+        <small>#{{ hero.id }}</small>
+        {{ hero.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <div class="card" *ngIf="selectedHero">
+      <div class="card-header">
+        <small>#{{ selectedHero.id }}</small>
+        {{ selectedHero.name }}
+      </div>
+    </div>
+  </div>
 </div>

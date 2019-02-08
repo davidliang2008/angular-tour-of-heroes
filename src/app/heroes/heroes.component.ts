@@ -8,6 +8,7 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
+  selectedHero: Hero;
   heroes: Hero[] = HEROES;
 
   constructor() { }
@@ -15,4 +16,9 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSelect(hero: Hero, $event): void {
+    this.selectedHero = hero;
+
+    $event.preventDefault();
+  }
 }
