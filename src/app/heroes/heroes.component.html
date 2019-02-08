@@ -1,9 +1,9 @@
-<div class="form-group">
-  <input type="text" class="form-control" placeholder="Enter hero's name" [(ngModel)]="hero.name" />
-</div>
-
-<div class="card">
-  <div class="card-header">
-    <small>#{{ hero.id }}</small> {{ hero.name | uppercase }}
-  </div>
+<h4>
+  My Heroes <span class="badge badge-secondary">{{ heroes.length }}</span>
+</h4>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let hero of heroes">
+    <small>#{{ hero.id }}</small>
+    {{ hero.name }}
+  </a>
 </div>
