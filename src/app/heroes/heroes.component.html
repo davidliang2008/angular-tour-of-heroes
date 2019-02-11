@@ -1,20 +1,16 @@
-<h5>
+<h3>
   My Heroes <span class="badge badge-secondary">{{ heroes.length }}</span>
-</h5>
+</h3>
 <div class="row">
-  <div class="col-lg-3">
-    <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action"
-         [class.active]="hero === selectedHero"
-         *ngFor="let hero of heroes"
-         (click)="onSelect(hero, $event)">
+  <div class="col-md-6 col-lg-4" *ngFor="let hero of heroes">
+    <div class="card">
+      <div class="card-header">
         <small>#{{ hero.id }}</small>
         {{ hero.name }}
-      </a>
+      </div>
+      <div class="card-body">
+        <a class="btn btn-primary btn-sm" routerLink="/heroes/{{ hero.id }}">Details</a>
+      </div>
     </div>
-    <br />
-  </div>
-  <div class="col-lg-9">
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   </div>
 </div>

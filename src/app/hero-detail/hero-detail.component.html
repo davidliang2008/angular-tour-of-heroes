@@ -1,6 +1,5 @@
-<div class="card" *ngIf="hero">
-  <div class="card-header">
-    Details of hero <small>#{{ hero.id }} </small>
-                    <strong>{{ hero.name }}</strong>
-  </div>
-</div>
+<h3>
+  Details of hero <small>#{{ hero.id }} </small>
+  {{ hero.name }}
+</h3>
+<a href="#" (click)="goBack($event)">go back</a>
