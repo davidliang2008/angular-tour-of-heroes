@@ -1,18 +1,26 @@
+<header>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/dashboard">Tour of Heroes</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/heroes">Heroes</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 <main role="main" class="container">
-  <section class="text-center">
-    <h1>{{title}}</h1>
-    <p class="lead">
-      This is just a demo project, following the Angular 7 Tour of Heroes tutorial from <br />
-      <a href="https://angular.io/tutorial/" target="_blank">https://angular.io/tutorial/</a>
-      with Bootstrap!
-    </p>
-  </section>
+  <router-outlet></router-outlet>
+</main>
+<!--<main role="main" class="container">
   <div class="row">
     <div class="col-lg-9">
-      <app-heroes></app-heroes>
+      <router-outlet></router-outlet>
     </div>
     <div class="col-lg-3">
       <app-messages></app-messages>
     </div>
   </div>
-</main>
+</main>-->

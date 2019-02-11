@@ -1,0 +1,19 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">
+    This is just a demo project, following the Angular 7 Tour of Heroes tutorial from <br />
+    <a href="https://angular.io/tutorial/" target="_blank">https://angular.io/tutorial/</a>
+    with Bootstrap!
+  </p>
+</div>
+<h3>Top Heroes</h3>
+<div class="row">
+  <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let hero of heroes">
+    <div class="card">
+      <div class="card-header">
+        <small>#{{ hero.id }}</small>
+        {{ hero.name }}
+      </div>
+    </div>
+  </div>
+</div>

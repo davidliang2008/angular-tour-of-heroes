@@ -1,0 +1,19 @@
+header {
+  nav {
+    flex-flow: column nowrap;
+
+    .navbar-brand {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+
+      .nav-link {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+    }
+  }
+}
